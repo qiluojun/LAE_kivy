@@ -1,0 +1,17 @@
+on: push
+name: on push
+jobs:
+  Build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: build apk
+      uses: docker://kivy/buildozer
+      with:
+        cmd: android debug
+
+    - name: save apk
+      uses: actions/upload-artifact@master
+      with:
+        name: launcher-0.1-debug.apk
+        path: bin/
