@@ -1,4 +1,4 @@
-Chinese version [here](READ_zh.md)
+Chinese version [here](README_zh.md)
 
 # Introduction
 
